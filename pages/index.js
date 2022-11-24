@@ -14,10 +14,14 @@ import Responsibilities from "../components/Responsibilities/Responsibilities.js
 import Testimonials from "../components/Testimonial/Testimonials.jsx";
 import CTA from "../components/CTA/CTA.jsx";
 import Footer from "../components/Footer/Footer.jsx";
+import { Login } from "@mui/icons-material";
+import Ogin from "../pages/login.jsx"
+
 export default function Home() {
   return (
     <StrictMode styles={{ maxWidth: "1600px" }}>
       <NextUIProvider theme={theme}>
+        <Login/>
         <Navbar />
         <Hero />
         <Why />
