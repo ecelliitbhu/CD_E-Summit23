@@ -18,11 +18,11 @@ export default function Home() {
   return (
     <StrictMode styles={{ maxWidth: "1600px" }}>
       <NextUIProvider theme={theme}>
-        <Navbar />
-        <Hero />
-        <Why />
-        <Sats />
-        <Feature />
+        <Navbar/>
+        <Hero/>
+        <Why/>
+        <Sats/>
+        <Feature/>
         <Responsibilities />
         <Testimonials />
         <CTA />

@@ -9,7 +9,7 @@ import {
 import { Layout } from "./Layout.js";
 import { AcmeLogo } from "./AcmeLogo.js";
 import { UserAuth } from "../../context/AuthContext.jsx";
-
+import Login from "../../pages/login.jsx"
 import { useRouter } from "next/router";
 
 export default function Nav() {
@@ -109,9 +109,8 @@ export default function Nav() {
               </Dropdown.Menu>
             </Dropdown>
           ) : (
-            <Button
+            <a href="/login"><Button
               className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font- text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
-              onClick={handleGoogleSignIn}
             >
               Login
               <svg
@@ -126,7 +125,7 @@ export default function Nav() {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </Button>
+            </Button></a>
           )}
         </Navbar.Content>
         <Navbar.Collapse>
