@@ -43,3 +43,50 @@ a {
     background: black;
   }
 } */
+.team-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.social {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  width: 360px;
+  margin: 40px auto;
+}
+.social a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons,
+.contact-icons {
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin: 10px;
+  display: inline;
+}
+.social-icons:hover {
+  transform: scale(1.5);
+  color: rgb(214, 168, 40);
+}
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+.forgPas:hover{
+  color: rgb(63, 107, 208);
+}
