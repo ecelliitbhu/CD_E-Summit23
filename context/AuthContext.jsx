@@ -6,6 +6,7 @@ import {
   signInWithRedirect,
   signOut,
   onAuthStateChanged,
+  getRedirectResult,
 } from "firebase/auth";
 
 import { auth, db } from "../utility/firebase";
@@ -19,9 +20,14 @@ export const AuthContextProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(user?.displayName);
   const handleGoogleSignIn = async () => {
     try {
-      const provider = new GoogleAuthProvider();
-      signInWithRedirect(auth, provider);
+      const data = await signInWithRedirect(auth, new GoogleAuthProvider());
+      console.log(data);
       setIsLoggedIn(true);
+      return onAuthStateChanged(auth, (user) => {
+        if (user == null) {
+          console.log("Error hai bhai");
+        }
+      });
     } catch (error) {
       setIsLoggedIn(false);
       console.log(error);
@@ -64,6 +70,7 @@ export const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log(currentUser);
       userRegistration(currentUser);
     });
     return () => {

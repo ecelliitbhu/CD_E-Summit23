@@ -35,20 +35,13 @@ const Dashboard = () => {
   const registrations = user.registrations?.map((person, id) =>
     createData(id, person.name, person.email)
   );
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     !user?.name &&
-  //       setTimeout(() => {
-  //         !user?.name && router.replace("/");
-  //       }, 1000);
-  //   }, 3000);
-  // }, []);
+  
   return (
     <>
       {!user?.name ? (
         <div className="inline-flex w-full sm:mx-2">
           <button
-            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
+            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-orange-500 dark:focus:ring-orange-700"
             onClick={() => handleGoogleSignIn()}
             style={{ margin: "100px auto" }}
           >
@@ -76,7 +69,7 @@ const Dashboard = () => {
 
               <div className={style.row4}>
                 <h1 className={style.data}>REFERAL CODE:</h1>
-                <h1 className={style.data} style={{ color: "#c084fc" }}>
+                <h1 className={style.data} style={{ color: "#FFA500" }}>
                   {user.referral_code}
                 </h1>
               </div>
@@ -88,14 +81,14 @@ const Dashboard = () => {
               <div>
                 <h1
                   className={style.heading}
-                  style={{ color: "#c084fc" }}
+                  style={{ color: "#FFA500" }}
                 >{`Coming soon!`}</h1>
               </div>
             </div>
             <div className={`${style.col}  ${style.col2} `}>
               <h1 className={style.heading}>
                 Registrations:{" "}
-                <span style={{ color: "#c084fc" }}>{registrations.length}</span>
+                <span style={{ color: "#FFA500" }}>{registrations.length}</span>
               </h1>
               <div>
                 {registrations.length ? (
@@ -151,3 +144,6 @@ function RegistrationsTable({ rows }) {
 }
 
 export default Dashboard;
+
+
+
