@@ -8,11 +8,13 @@ import {
 } from "@nextui-org/react";
 import { Layout } from "./Layout.js";
 import { UserAuth } from "../../context/AuthContext.jsx";
-import { Link as NextLink } from "next/link";
+// import { Link as NextLink } from "next/link";
 
 import { useRouter } from "next/router";
 import Image from "next/image";
 import logo from "../../assets/ecell_logo.png";
+// import { useRouter } from "next/router";
+// import { doc, getDoc, setDoc, collection, set } from "firebase/firestore";
 
 export default function Nav() {
   const router = useRouter();
@@ -33,7 +35,7 @@ export default function Nav() {
   console.log(user);
   return (
     <Layout className="bg-white">
-      <Navbar  variant="sticky" >
+      <Navbar variant="sticky">
         {/* <Navbar.Toggle showIn="xs" /> */}
         <Link href="/">
           <Navbar.Brand
@@ -42,10 +44,11 @@ export default function Nav() {
                 w: "12%",
               },
             }}
-          >
-
-          </Navbar.Brand>
-          <Image src={logo} alt="logo" className=" cursor-pointer h-auto w-28 logo"
+          ></Navbar.Brand>
+          <Image
+            src={logo}
+            alt="logo"
+            className=" cursor-pointer h-auto w-28 logo"
           />
         </Link>
 
@@ -56,7 +59,6 @@ export default function Nav() {
           variant="highlight-rounded"
           className="p-2"
         >
-
           {/* <Navbar.Link href="/#" className="border-orange-500 hover:border-b-2">Home</Navbar.Link> */}
           <Navbar.Link href="/#whyCD" className="  border-orange-500 hover:border-b-2">Why CD?</Navbar.Link>
           <Navbar.Link href="/#what-we-offer" className="  border-orange-500 hover:border-b-2">What we offer?</Navbar.Link>
@@ -87,7 +89,7 @@ export default function Nav() {
                 </Dropdown.Trigger>
               </Navbar.Item>
               <Dropdown.Menu
-                
+                color="orange"
                 onAction={(actionKey) => {
                   if (actionKey === "logout") {
                     logout();
