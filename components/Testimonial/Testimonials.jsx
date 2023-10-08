@@ -14,7 +14,7 @@ const Testimonials = () => {
           </div>
 
           <div className="flex items-start max-w-6xl mx-auto mt-16">
-            <button className="hidden p-2  transition-colors duration-300 border rounded-full rtl:-scale-x-100 text-gray-200 hover:bg-gray-800 lg:block">
+            <button className="hidden p-2 transition-colors duration-300 border rounded-full rtl:-scale-x-100 text-gray-200 hover:bg-gray-800 lg:block">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-6 h-6"
@@ -53,7 +53,7 @@ const Testimonials = () => {
                   <h1 className="font-semibold text-white">
                     Sukriti Gill
                   </h1>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                  <span className="text-sm text-gray-400">
                     Marketer
                   </span>
                 </div>
