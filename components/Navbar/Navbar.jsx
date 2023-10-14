@@ -119,7 +119,7 @@ export default function Nav() {
           ) : (
             <Button
               className="inline-flex items-center w-fit justify-center px-3 py-3 mr-2 text-base text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300"
-              onClick={handleGoogleSignIn}
+              onPress={handleGoogleSignIn}
             >
               Login
               <svg
