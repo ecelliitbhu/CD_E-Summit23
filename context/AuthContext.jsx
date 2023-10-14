@@ -21,7 +21,6 @@ export const AuthContextProvider = ({ children }) => {
   const handleGoogleSignIn = async () => {
     try {
       const data = await signInWithRedirect(auth, new GoogleAuthProvider());
-      console.log(data);
       setIsLoggedIn(true);
       return onAuthStateChanged(auth, (user) => {
         if (user == null) {

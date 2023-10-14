@@ -8,21 +8,15 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCEhxxSKrjdTtcEHK1a1nnKKziTY9xhjLY",
-  authDomain: "summit-23.firebaseapp.com",
-  databaseURL: "https://summit-23-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "summit-23",
-  storageBucket: "summit-23.appspot.com",
-  messagingSenderId: "924550678836",
-  appId: "1:924550678836:web:78b3b55876678c5ffa7d61",
-  measurementId: "G-BGVL3Q3EQL"
+  apiKey: "AIzaSyDNsxpenEgeTL9lonsFrIDF3EWXoUwXpHQ",
+  authDomain: "cdportal23-6cfb5.firebaseapp.com",
+  projectId: "cdportal23-6cfb5",
+  storageBucket: "cdportal23-6cfb5.appspot.com",
+  messagingSenderId: "1061299705925",
+  appId: "1:1061299705925:web:c8a94792fa03993b99ab2c",
+  measurementId: "G-4XS90GK351"
 };
-let app; // Declare the app variable
 
-// Initialize the Firebase app if it hasn't been initialized already
-if (!app) {
-  app = initializeApp(firebaseConfig, "yourAppName");
-}
+const app = initializeApp(firebaseConfig,"firstApp");
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-// const analytics = getAnalytics(app);
