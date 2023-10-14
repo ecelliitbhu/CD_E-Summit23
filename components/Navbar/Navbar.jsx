@@ -32,7 +32,6 @@ export default function Nav() {
   ];
 
   const { handleGoogleSignIn, logout, user } = UserAuth();
-  console.log(user);
   return (
     <Layout className="bg-white">
       <Navbar variant="sticky">
