@@ -8,11 +8,13 @@ import {
 } from "@nextui-org/react";
 import { Layout } from "./Layout.js";
 import { UserAuth } from "../../context/AuthContext.jsx";
-import { Link as NextLink } from "next/link";
+// import { Link as NextLink } from "next/link";
 
 import { useRouter } from "next/router";
 import Image from "next/image";
 import logo from "../../assets/ecell_logo.png";
+// import { useRouter } from "next/router";
+// import { doc, getDoc, setDoc, collection, set } from "firebase/firestore";
 
 export default function Nav() {
   const router = useRouter();
@@ -31,7 +33,6 @@ export default function Nav() {
   ];
 
   const { handleGoogleSignIn, logout, user } = UserAuth();
-  console.log(user);
   return (
     <Layout className="bg-white">
       <Navbar variant="sticky">
@@ -113,6 +114,7 @@ export default function Nav() {
                 </Dropdown.Trigger>
               </Navbar.Item>
               <Dropdown.Menu
+                color="orange"
                 onAction={(actionKey) => {
                   if (actionKey === "logout") {
                     logout();
@@ -159,7 +161,7 @@ export default function Nav() {
           ) : (
             <Button
               className="inline-flex items-center w-fit justify-center px-3 py-3 mr-2 text-base text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300"
-              onClick={handleGoogleSignIn}
+              onPress={handleGoogleSignIn}
             >
               Login
               <svg
