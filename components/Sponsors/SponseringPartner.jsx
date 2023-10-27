@@ -1,5 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
+import Image from "next/image";
 
 const partnerData = {
   imgUrl:
@@ -28,7 +29,7 @@ export default function SponseringPartner() {
         }}
       >
         <div className="w-32 h-32 mx-auto mt-6">
-          <img
+          <Image
             className="w-full h-full object-cover rounded-full transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110 duration-300"
             src={partnerData.imgUrl}
             alt={partnerData.name}
