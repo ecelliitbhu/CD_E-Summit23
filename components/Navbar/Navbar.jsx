@@ -29,6 +29,7 @@ export default function Nav() {
     "Team Settings",
     "Help & Feedback",
     "Log Out",
+    "Leaderboard"
   ];
 
   const { handleGoogleSignIn, logout, user } = UserAuth();
@@ -59,11 +60,36 @@ export default function Nav() {
           className="p-2"
         >
           {/* <Navbar.Link href="/#" className="border-orange-500 hover:border-b-2">Home</Navbar.Link> */}
-          <Navbar.Link href="/#whyCD" className="  border-orange-500 hover:border-b-2">Why CD?</Navbar.Link>
-          <Navbar.Link href="/#what-we-offer" className="  border-orange-500 hover:border-b-2">What we offer?</Navbar.Link>
-          <Navbar.Link href="/#responsibilities" className="  border-orange-500 hover:border-b-2">Responsibilities</Navbar.Link>
-          <Navbar.Link href="/#testimonials" className="  border-orange-500 hover:border-b-2">Testimonials</Navbar.Link>
-          <Navbar.Link href="/#contacts" className="border-orange-500 hover:border-b-2">Contacts</Navbar.Link>
+          <Navbar.Link
+            href="/#whyCD"
+            className="  border-orange-500 hover:border-b-2"
+          >
+            Why CD?
+          </Navbar.Link>
+          <Navbar.Link
+            href="/#what-we-offer"
+            className="  border-orange-500 hover:border-b-2"
+          >
+            What we offer?
+          </Navbar.Link>
+          <Navbar.Link
+            href="/#responsibilities"
+            className="  border-orange-500 hover:border-b-2"
+          >
+            Responsibilities
+          </Navbar.Link>
+          <Navbar.Link
+            href="/#testimonials"
+            className="  border-orange-500 hover:border-b-2"
+          >
+            Testimonials
+          </Navbar.Link>
+          <Navbar.Link
+            href="/#contacts"
+            className="border-orange-500 hover:border-b-2"
+          >
+            Contacts
+          </Navbar.Link>
         </Navbar.Content>
 
         <Navbar.Content
@@ -94,10 +120,16 @@ export default function Nav() {
                     logout();
                   } else if (actionKey === "dashboard") {
                     router.push("dashboard");
+                  } else if (actionKey === "leaderboard") {
+                    router.push("leaderboard");
                   }
                 }}
               >
-                <Dropdown.Item key="profile" css={{ height: "$18" }} className="hover:bg-orange-400">
+                <Dropdown.Item
+                  key="profile"
+                  css={{ height: "$18" }}
+                  className="hover:bg-orange-400"
+                >
                   <Text b color="inherit" css={{ d: "flex" }}>
                     Signed in as
                   </Text>
@@ -107,8 +139,19 @@ export default function Nav() {
                       : user.name.slice(0, 22) + "..."}
                   </Text>
                 </Dropdown.Item>
-                <Dropdown.Item key="dashboard" withDivider className="hover:bg-orange-400">
+                <Dropdown.Item
+                  key="dashboard"
+                  withDivider
+                  className="hover:bg-orange-400"
+                >
                   Dashboard
+                </Dropdown.Item>
+                <Dropdown.Item
+                  key="leaderboard"
+                  withDivider
+                  className="hover:bg-orange-400"
+                >
+                  Leaderboard
                 </Dropdown.Item>
                 <Dropdown.Item key="logout" withDivider color="error">
                   Log Out

@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { Component, useEffect, useState } from "react";
 
 import style from "./Dashboard.module.scss";
 import Image from "next/image";
@@ -13,7 +13,9 @@ import {
   TableRow,
   TableBody,
 } from "@mui/material";
-
+import FormComponent from "../Form/form";
+import { getColumnsFromOptions } from "@mui/x-data-grid-generator";
+import Cookies from "js-cookie";
 function createData(rank, name, email) {
   return { rank, name, email };
 }
@@ -30,12 +32,13 @@ const Loader = () => {
   );
 };
 const Dashboard = () => {
+  const isFirstLoggedIn = Cookies.get("isFirstLoggedIn");
   const router = useRouter();
   const { handleGoogleSignIn, logout, user, isLoggedIn } = UserAuth();
   const registrations = user.registrations?.map((person, id) =>
     createData(id, person.name, person.email)
   );
-  
+
   return (
     <>
       {!user?.name ? (
@@ -47,6 +50,10 @@ const Dashboard = () => {
           >
             Login
           </button>
+        </div>
+      ) : isFirstLoggedIn == "true" ? (
+        <div className={style.container1}>
+          <FormComponent />
         </div>
       ) : (
         <div className={style.container1}>
@@ -78,11 +85,15 @@ const Dashboard = () => {
           <div className={`${style.row}  ${style.row2} `}>
             <div className={`${style.col}  ${style.col2} `}>
               <h1 className={style.heading}>Leaderboard</h1>
-              <div>
-                <h1
-                  className={style.heading}
-                  style={{ color: "#FFA500" }}
-                >{`Coming soon!`}</h1>
+              <div className="inline-flex w-full sm:w-auto sm:mx-2">
+                <button
+                  className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 dark:focus:ring-orange-600"
+                  onClick={() => {
+                    router.replace("/leaderboard");
+                  }}
+                >
+                  Go to Leaderboard
+                </button>
               </div>
             </div>
             <div className={`${style.col}  ${style.col2} `}>
@@ -144,6 +155,3 @@ function RegistrationsTable({ rows }) {
 }
 
 export default Dashboard;
-
-
-
