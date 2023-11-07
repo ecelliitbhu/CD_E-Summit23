@@ -7,6 +7,7 @@
 
 # testing
 /coverage
+.env
 
 # next.js
 /.next/
@@ -19,6 +20,7 @@
 .DS_Store
 *.pem
 
+.env
 # debug
 npm-debug.log*
 yarn-debug.log*
