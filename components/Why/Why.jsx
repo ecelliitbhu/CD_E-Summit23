@@ -18,7 +18,7 @@ const Why = () => {
               </h1>
               <h1 className="text-4xl font-bold text-gray-800 md:text-5xl ">
                 <span className="text-primary text-orange-600">
-                  Campus Director
+                  Campus Internship Programme
                 </span>
               </h1>
               <p className="text-lg text-gray-600 dark:text-gray-500">
