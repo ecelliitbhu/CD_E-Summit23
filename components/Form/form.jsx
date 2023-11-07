@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { TextField, Button } from "@mui/material";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../utility/firebase";
+import {doc,setDoc} from "firebase/firestore"
+import Spinner from "../Spinner/spinner";
+import { UserAuth } from "../../context/AuthContext";
 export default function FormComponent() {
+  const { user} = UserAuth();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState(0);
@@ -10,25 +14,28 @@ export default function FormComponent() {
   const [linkedinId, setLinkedinId] = useState("");
   const [instagramId, setInstagramId] = useState("");
   const [instituteName, setInstituteName] = useState("");
+  const [loading, setLoading] = useState(false);
   const formData = {
     username: name,
-    useremail: email,
+    useremail: user?.email,
     usercontact: contact,
     userlinkedinid: linkedinId,
     userinstaid: instagramId,
     userinstitutename: instituteName,
     useryearofstudy: yearOfStudy,
   };
-  const handleSubmit = async () => {
-    const campusAmbassadorCollection = collection(
-      db,
-      "campus_ambassadors_info"
-    );
-    const newCampusAmbassadorRef = await addDoc(
-      campusAmbassadorCollection,
+  const handleSubmit = async (event) => {
+    setLoading(true);
+    // ambassadorInfo(formData);
+    // const campusAmbassadorCollection = collection(
+    //   db,
+    //   "campus_ambassadors_info"
+    // );
+    const newCampusAmbassadorRef = await setDoc(
+      doc(db, "campus_ambassadors_info", user.email),
       formData
     );
-    console.log(newCampusAmbassadorRef.id);
+    location.reload();
   };
   return (
     <div>
@@ -45,7 +52,7 @@ export default function FormComponent() {
             setName(event.target.value);
           }}
         />
-        <TextField
+        {/* <TextField
           variant="filled"
           label="Email Address"
           type="email"
@@ -53,7 +60,7 @@ export default function FormComponent() {
           onChange={(event) => {
             setEmail(event.target.value);
           }}
-        />
+        /> */}
         <TextField
           variant="filled"
           label="Linkedin ID"
@@ -101,15 +108,19 @@ export default function FormComponent() {
         />
       </div>
       <div className="flex justify-end mt-4">
-        <Button
-          variant="contained"
-          color="warning"
-          size="large"
-          className="bg-orange-500"
-          onClick={handleSubmit}
-        >
-          Submit
-        </Button>
+        {!loading ? (
+          <Button
+            variant="contained"
+            color="warning"
+            size="large"
+            className="bg-orange-500"
+            onClick={handleSubmit}
+          >
+            Submit
+          </Button>
+        ) : (
+          <Spinner />
+        )}
       </div>
     </div>
   );

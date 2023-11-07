@@ -17,20 +17,26 @@ const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const router = useRouter();
   const [user, setUser] = useState({});
+ 
+  const currentDate = new Date();
+  const expires = new Date(
+    currentDate.getFullYear() + 10,
+    currentDate.getMonth(),
+    currentDate.getDate()
+  );
   const [isLoggedIn, setIsLoggedIn] = useState(user?.displayName);
+  // Cookies.set("isFirstLoggedIn", "false", { expires: expires });
   const handleGoogleSignIn = async () => {
+   
     try {
-      const data = await signInWithRedirect(auth, new GoogleAuthProvider());
+      const provider = new GoogleAuthProvider();
+      signInWithPopup(auth, provider);
       setIsLoggedIn(true);
-      return onAuthStateChanged(auth, (user) => {
-        if (user == null) {
-          console.log("Error hai bhai");
-        }
-      });
     } catch (error) {
       setIsLoggedIn(false);
-      console.log(error);
+      
     }
+  
   };
   const logout = async () => {
     console.log("LOGGING OUT");
@@ -41,19 +47,11 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   const userRegistration = async (googleUser) => {
-    const currentDate = new Date();
-    const expires = new Date(
-      currentDate.getFullYear() + 10,
-      currentDate.getMonth(),
-      currentDate.getDate()
-    );
-
     if (user?.name) return;
     if (googleUser?.displayName) {
       const CDref = doc(db, "campus directors", googleUser.uid);
       const CDSnap = await getDoc(CDref);
       if (CDSnap.exists()) {
-        // console.log("Document data:", CDSnap.data());
         setUser(CDSnap.data());
         Cookies.set("isFirstLoggedIn", "false", { expires: expires });
       } else {
@@ -76,9 +74,10 @@ export const AuthContextProvider = ({ children }) => {
     }
   };
 
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log(currentUser);
+      // console.log(currentUser);
       userRegistration(currentUser);
     });
     return () => {
@@ -87,7 +86,13 @@ export const AuthContextProvider = ({ children }) => {
   }, []);
   return (
     <AuthContext.Provider
-      value={{ handleGoogleSignIn, user, logout, isLoggedIn }}
+      value={{
+        handleGoogleSignIn,
+        user,
+        logout,
+        isLoggedIn,
+      
+      }}
     >
       {children}
     </AuthContext.Provider>
