@@ -20,7 +20,7 @@ export default function Home() {
       <NextUIProvider theme={theme} id="vishisht">
         <Head>
           <link rel="shortcut icon" href="/favicon.ico" />
-          <title>Campus Director Portal | E-Cell IIT BHU</title>
+          <title>Campus Executive Internship | E-Cell IIT BHU</title>
         </Head>
         <div className="w-full bg-white">
           <Navbar />
