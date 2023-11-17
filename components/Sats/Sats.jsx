@@ -8,7 +8,7 @@ export default function StatisticsSimpleLight() {
             <dl className="space-y-1 p-5">
               <dt className="text-4xl font-extrabold">1,700+</dt>
               <dd className="text-sm uppercase tracking-wide font-semibold text-orange-600">
-                Enthusiastic CD’s Onboarded
+                Enthusiastic Campus Intern&apos;s Onboarded
               </dd>
             </dl>
             <dl className="space-y-1 p-5">

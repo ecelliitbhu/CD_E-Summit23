@@ -2,25 +2,25 @@ import React from "react";
 import Carousel from "react-material-ui-carousel";
 const items = [
   {
-    name: "Vishwanathan Iyer",
+    name: "Abhinav Sachdeva",
     role: "VP Architectures-APJ, Cisco",
     imgURL: "",
     descripiton:
-      "E-Cell IIT(BHU), Varanasi, is a very vibrant group of student entrepreneurs and mentors who are a very passionate group of alumni and friends of IIT(BHU). whatever they do, whether the annual E-Summit, Culture E-Cell or ThingQbator, they do with so much enthusiasm and energy. As a friend of IIT(BHU), I very much enjoy teaching my entrepreneurship class every year to future entrepreneurs, organized by the dynamic IIT(BHU) E-Cell volunteers. It is also a pleasure to enjoy the hospitality of the place and students which is very unique to IIT(BHU).",
+    "The learning curve was great in this event. The guidance and mentoring were pretty good; it was way more helpful than I thought. The events were made so that all the aspects of entrepreneurship were covered. My experience was wholesome, and I appreciate the team."
   },
   {
-    name: "Manish Gupta",
+    name: "Vivek Raval\n",
     role: "Founder, Alphonso Inc.",
     imgURL: "",
     descripiton:
-      "It was an honor to participate in the E-Summit 2020. The amount of energy and passion displayed by the budding entrepreneurs was impressive at the very least. It was heartening to see how the E-Cell and the ThingQbator teams are striving to provide a platform to nurture the entrepreneurship mindset among the students. I believe that in the world of startups, there are no failures, there are successes and there are successful-failures. So, to all involved, I wish you plenty of both in the coming years.",
+    "The event changed my perspective on entrepreneurship in a good way. It made me believe that I had all that one should know to run a successful firm. It also gave me insights into how entrepreneurs should tackle their issues through various programmes, and I felt so good to be a part of E-Summit."
   },
   {
-    name: "BV Jagadeesh",
+    name: "Sukriti Gill\n",
     role: "Founder, KAAJ Ventures",
     imgURL: "",
     descripiton:
-      "E-Cell IIT(BHU), Varanasi, is a very vibrant group of student entrepreneurs and mentors who are a very passionate group of alumni and friends of IIT(BHU). whatever they do, whether the annual E-Summit, Culture E-Cell or ThingQbator, they do with so much enthusiasm and energy. As a friend of IIT(BHU), I very much enjoy teaching my entrepreneurship class every year to future entrepreneurs, organized by the dynamic IIT(BHU) E-Cell volunteers. It is also a pleasure to enjoy the hospitality of the place and students which is very unique to IIT(BHU).",
+    "The programmes in this event are unique and were very useful to me. The information and experience from many sessions were beneficial, and the event encouraged me to take bold initiatives in my career. Thanks to the team and E-Cell, IIT BHU."
   },
 ];
 const CarouselItem = (props) => {
@@ -42,7 +42,7 @@ const CarouselItem = (props) => {
 
         <div className="mt-4 text-center">
           <h1 className="font-semibold text-white">{props.name}</h1>
-          <span className="text-sm text-gray-400">{props.role}</span>
+          {/*<span className="text-sm text-gray-400">{props.role}</span>*/}
         </div>
       </div>
     </div>

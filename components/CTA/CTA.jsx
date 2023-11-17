@@ -11,7 +11,7 @@ const CTA = () => {
       <section className="">
         <div className="container flex flex-col items-center px-4 py-12 mx-auto text-center">
           <h1 className="text-3xl font-thin tracking-tight sm:text-4xl text-black">
-            Be the flag bearer of Entrepreneurship in your college.
+            Convinced Enough? Register Now!
           </h1>
 
           {/* <h3 className="font-bold  text-white-700 text-5xl mt-3 ">

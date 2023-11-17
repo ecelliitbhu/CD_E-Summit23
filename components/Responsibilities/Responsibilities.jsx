@@ -33,9 +33,7 @@ const Responsibilities = () => {
                 />
               </svg>
             </span>
-            The Campus Director must assist the students with their total
-            capacity in registering for E-Cell IIT BHU&apos;s E-Summit&apos;23
-            competitions.
+            The Campus Executive Intern must assist the students with their total capacity in registering for E-Cell IIT BHU&apos;s competitions.
           </li>
           <li className="flex">
             <span className="mr-1">
@@ -53,9 +51,7 @@ const Responsibilities = () => {
                 />
               </svg>
             </span>
-            The Campus Director must share all the updates regarding
-            E-Summit&apos;23 on a minimum of six WhatsApp groups of their
-            college community.
+            The Campus Executive Intern must increase the outreach of the initiatives of the E-Cell IIT BHU to promote entrepreneurial activities in his/her college network.
           </li>
           <li className="flex">
             <span className="mr-1">
@@ -73,9 +69,7 @@ const Responsibilities = () => {
                 />
               </svg>
             </span>
-            The Campus Director may coordinate with the college authorities to
-            extensively circulate the message regarding the conduction of E-Cell
-            IIT BHU&apos;s E-Summit&apos;23.
+            The Campus Executive Intern may coordinate with the college authorities to extensively circulate the message regarding the conduction of E-Cell IIT BHU events and initiatives.
           </li>
         </ul>
         <ul className="space-y-3">
@@ -95,9 +89,7 @@ const Responsibilities = () => {
                 />
               </svg>
             </span>
-            The Campus Director may create a separate WhatsApp Group to share
-            all the updates and notices regarding E-Cell IIT BHU&apos;s
-            E-Summit&apos;23 for all interested students.
+            The Campus Executive Intern must Ideate by engaging in discussions with the other Campus Interns and E-cell coordinators to bring new ideas and increase overall reach of E-Cell IIT BHU
           </li>
           <li className="flex">
             <span className="mr-1">
@@ -115,8 +107,7 @@ const Responsibilities = () => {
                 />
               </svg>
             </span>
-            The Campus Director must keep a tab on the total headcount of
-            registered students and valid proof for each registered student.
+            The Campus Executive intern may organize events/sessions promoting entrepreneurship in their respective colleges with the support of E-Cell IIT BHU.
           </li>
           <li className="flex">
             <span className="mr-1">
