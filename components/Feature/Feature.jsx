@@ -46,7 +46,7 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Get free E-Summit 2023 passes!
+            Free E-Summit 2024 Passes
           </p>
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
@@ -71,7 +71,7 @@ export default function Feature() {
             Organically grow
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Certificate of Merit
+            One-to-one mentorship by startup founders
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
           
@@ -85,7 +85,7 @@ export default function Feature() {
             A slice of heaven
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Unstop Membership worth 2999Rs for free.
+            Top performers will be featured on the social media handles of E-Cell IIT BHU.
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900"></p> */}
         </div>
@@ -97,7 +97,7 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Premium versions of student developer websites
+            Access to the Entrepreneurship Masterclass
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
          
@@ -111,7 +111,7 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Get featured on Weekly Newsletter of E-Cell IIT BHU
+            Top Campus Executive Interns to be featured in the E-Cell IIT BHU&apos;s Weekly Newsletter
           </p>
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
@@ -122,8 +122,7 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-center text-sm text-white-900">
-            Top performers will be featured on the social media handles of
-            E-Cell IIT BHU.
+            Access to Curated Startup Help-book of E-Cell IIT BHU
           </p>
           {/* <p className="mb-3 text-center text-sm text-white-900">
            
@@ -137,8 +136,7 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Get exciting goodies, including masks, T-shirts, badges, and a lot
-            more.
+            Opportunity to enter BWU Cohort and start your entrepreneurship journey
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
           
@@ -152,8 +150,7 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Opportunity to enter BWU Cohort Internship and will be provided with
-            the prep roadmap and resources.
+            Certificate of Internship verified by E-Cell IIT BHU
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
           
@@ -167,8 +164,7 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Top performers will get discounted/free courses across various
-            fields of interest like entrepreneurship, coding, and many more.
+            Goodies, merchandise and learning resources from our sponsors
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
          
