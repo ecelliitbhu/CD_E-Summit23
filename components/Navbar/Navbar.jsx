@@ -7,6 +7,7 @@ import {
   Dropdown,
   Button,
 } from "@nextui-org/react";
+// import Navbar from "@nextui-org/react/dist/navbar";
 import { Layout } from "./Layout.js";
 import { UserAuth } from "../../context/AuthContext.jsx";
 import { Link as NextLink } from "next/link";
